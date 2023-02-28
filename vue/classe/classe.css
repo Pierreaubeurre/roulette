@@ -1,0 +1,23 @@
+@import url(../general.css);
+
+#detail {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    text-align: center;
+    font-size: xx-large;
+}
+
+table,
+tr,
+td,
+th {
+    border: 1px solid black;
+}
+
+th,
+td {
+    padding: 5px;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Roulette évaluation
+    </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="evaluation.css" type="text/css">
+    <!--
+  <script src=""> 
+  -->
+    </script>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Evaluation</h1>
+
+    </header>
+
+    <input type="text" id="nom" placeholder="Nom de l'évaluation" required>
+
+    <div id="evaluation">
+
+        <button>Tirer au sort</button>
+
+        <div id="presence">
+
+            <input type="radio" id="present" name="presence" value="">
+            <label for="present">Présent</label>
+
+            <input type="radio" id="absent" name="presence" value="">
+            <label for="absent">Absent</label>
+
+        </div>
+
+        <input type="number" id="note" placeholder="Note">
+
+        <button>Noter l'élève</button>
+    </div>
+
+    <h2>Liste des élèves notés</h2>
+
+    <div class="detail">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">NOM</th>
+                    <th scope="col">PRENOM</th>
+                    <th scope="col">NOTE</th>
+                    <th scope="col">MODIFIER</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>DECHAPPE</td>
+                    <td>GAETAN</td>
+                    <td>15</td>
+                    <td>
+                        <button>+</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>DECHAPPE</td>
+                    <td>ANTOINE</td>
+                    <td>18</td>
+                    <td>
+                        <button>+</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="separation"></div>
+
+    <h2>Liste des élèves à noter</h2>
+
+    <div class="detail">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">NOM</th>
+                    <th scope="col">PRENOM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>DECHAPPE</td>
+                    <td>GAETAN</td>
+                </tr>
+                <tr>
+                    <td>DECHAPPE</td>
+                    <td>ANTOINE</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
