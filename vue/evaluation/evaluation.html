@@ -5,10 +5,8 @@
     <title>Roulette évaluation
     </title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="evaluation.css" type="text/css">
-    <!--
-  <script src=""> 
-  -->
+    <link rel="stylesheet" href="vue/evaluation/evaluation.css" type="text/css">
+    <script src="vue/evaluation/evaluation.js">
     </script>
 </head>
 
@@ -20,13 +18,21 @@
 
     </header>
 
-    <input type="text" id="nom" placeholder="Nom de l'évaluation" required>
+    <input type="text" id="nom_evaluation" placeholder="Nom de l'évaluation" required>
 
-    <div id="evaluation">
 
-        <button>Tirer au sort</button>
 
-        <div id="presence">
+    <button onclick="tirage()">Tirer au sort</button>
+
+    <br>
+    <br>
+    <br>
+
+    <div>
+        <h3 id="nom">NOM</h3>
+        <h3 id="prenom">PRENOM</h3>
+
+        <div>
 
             <input type="radio" id="present" name="presence" value="">
             <label for="present">Présent</label>
@@ -38,7 +44,7 @@
 
         <input type="number" id="note" placeholder="Note">
 
-        <button>Noter l'élève</button>
+        <button onclick="note()">Noter l'élève</button>
     </div>
 
     <h2>Liste des élèves notés</h2>
@@ -49,27 +55,13 @@
                 <tr>
                     <th scope="col">NOM</th>
                     <th scope="col">PRENOM</th>
+                    <th scope="col">PRESENCE</th>
                     <th scope="col">NOTE</th>
-                    <th scope="col">MODIFIER</th>
+                    <!--<th scope="col">MODIFIER</th>-->
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>DECHAPPE</td>
-                    <td>GAETAN</td>
-                    <td>15</td>
-                    <td>
-                        <button>+</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>DECHAPPE</td>
-                    <td>ANTOINE</td>
-                    <td>18</td>
-                    <td>
-                        <button>+</button>
-                    </td>
-                </tr>
+            <tbody id="noté">
+
             </tbody>
         </table>
     </div>
@@ -86,15 +78,8 @@
                     <th scope="col">PRENOM</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>DECHAPPE</td>
-                    <td>GAETAN</td>
-                </tr>
-                <tr>
-                    <td>DECHAPPE</td>
-                    <td>ANTOINE</td>
-                </tr>
+            <tbody id="pas_noter">
+                %eleve%
             </tbody>
         </table>
     </div>

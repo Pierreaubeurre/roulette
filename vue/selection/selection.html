@@ -5,7 +5,7 @@
   <title>Roulette évaluation
   </title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="selection.css" type="text/css">
+  <link rel="stylesheet" href="vue/selection/selection.css" type="text/css">
   <!--
   <script src=""> 
   -->
@@ -15,27 +15,21 @@
 <body>
 
   <header>
-
     <h1>Choix de la classe</h1>
-
   </header>
 
-  <div id="selection">
+  <form id="selection" method="get">
+
     <h2>Veuillez choisir une classe :</h2>
-    <select>
-      <option value>SLAM</option>
-      <option value>SISR</option>
+
+    <select name="classe">
+      %select%
     </select>
-  </div>
 
-  <button>
-    Détails
-  </button>
+    <input type="hidden" name="page" value="evaluation">
+    <input type="submit" value="Evaluer">
 
-  <button>
-    Evaluer
-  </button>
-
+  </form>
 </body>
 
 </html>

@@ -16,3 +16,15 @@
 button{
     display: flex;
 }
+
+button{
+    text-decoration: none;
+    color: black;
+    background-color: gray;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+button:hover{
+    background-color: dimgrey;
+}

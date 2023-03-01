@@ -30,3 +30,19 @@ CREATE TABLE Note
     FOREIGN KEY (idELeve) REFERENCES Eleve(idEleve) ON DELETE CASCADE ON UPDATE CASCADE,
     PRIMARY KEY (idNote)
 );
+
+INSERT INTO Eleve (nom_Eleve,prenom_Eleve,classe)
+VALUES
+    ("DECHAPPE","GAETAN","SLAM"),
+    ("COLLARD","THIBAULT","SLAM"),
+    ("SCHMITT","THOMAS","SLAM"),
+    ("HUBERT","LEA","SLAM"),
+    ("SARAZIN","KAREN","SLAM"),
+    ("TEXEIRA","RYAN","SLAM"),
+    ("HUREAUX","SAMUEL","SLAM"),
+    ("SACCO","MATHÉO","SLAM"),
+    ("LAMABINET","THEO","SLAM"),
+    ("GOUVERNEUR","THEO","SLAM"),
+    ("SOHIER","ENZO","SISR"),
+    ("SAUVAGE","GUILLAUME","SISR"),
+    ("TEST","TEST","TEST");
