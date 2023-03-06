@@ -21,8 +21,8 @@ CREATE TABLE Note
 (
     date_Note                DATE,
     nom_Note                 VARCHAR(20),
-    resultat_Note            FLOAT,
     absence                  BOOLEAN,
+    resultat_Note            FLOAT NULL,
 
     idNote                   INTEGER(150) NOT NULL AUTO_INCREMENT,
     idEleve                  INTEGER(150) NOT NULL,

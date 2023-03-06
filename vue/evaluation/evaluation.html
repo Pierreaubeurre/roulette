@@ -6,7 +6,7 @@
     </title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="vue/evaluation/evaluation.css" type="text/css">
-    <script src="vue/evaluation/evaluation.js">
+    <script src="vue/evaluation/evaluation.js" defer>
     </script>
 </head>
 
@@ -18,26 +18,29 @@
 
     </header>
 
-    <input type="text" id="nom_evaluation" placeholder="Nom de l'évaluation" required>
+    <p>Nom de l'évaluation :</p>
+    <input type="text" id="nom_evaluation" placeholder="Nom de l'évaluation">
 
+    <p>Date de l'évaluation :</p>
+    <p>%date%</p>
 
-
-    <button onclick="tirage()">Tirer au sort</button>
+    <button onclick="tirage()" id="tirage">Tirer au sort</button>
 
     <br>
     <br>
     <br>
 
-    <div>
+    <div id="selectionné" hidden>
         <h3 id="nom">NOM</h3>
         <h3 id="prenom">PRENOM</h3>
+        <h3 id="id">ID</h3>
 
         <div>
 
-            <input type="radio" id="present" name="presence" value="">
+            <input type="radio" id="present" name="presence" onchange="absent(this.id)" checked="true">
             <label for="present">Présent</label>
 
-            <input type="radio" id="absent" name="presence" value="">
+            <input type="radio" id="absent" name="presence" onchange="absent(this.id)">
             <label for="absent">Absent</label>
 
         </div>
@@ -45,7 +48,15 @@
         <input type="number" id="note" placeholder="Note">
 
         <button onclick="note()">Noter l'élève</button>
+
     </div>
+
+    <br>
+    <br>
+    <br>
+
+    <button onclick="" disabled="disabled" id="confirmer">Confirmer</button>
+
 
     <h2>Liste des élèves notés</h2>
 
@@ -55,6 +66,7 @@
                 <tr>
                     <th scope="col">NOM</th>
                     <th scope="col">PRENOM</th>
+                    <th scope="col">ID</th>
                     <th scope="col">PRESENCE</th>
                     <th scope="col">NOTE</th>
                     <!--<th scope="col">MODIFIER</th>-->
@@ -76,6 +88,7 @@
                 <tr>
                     <th scope="col">NOM</th>
                     <th scope="col">PRENOM</th>
+                    <th scope="col">ID</th>
                 </tr>
             </thead>
             <tbody id="pas_noter">
